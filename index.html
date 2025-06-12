@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo 2d</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+     <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Alinha os itens em coluna para o botão e o canvas */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #19af05; /* Fundo escuro para o corpo */
+            margin: 0;
+            overflow: hidden; /* Evita barras de rolagem */
+        }
+        canvas {
+            border: 5px solid #000; /* Borda para o canvas */
+            background-color: #000; /* Fundo preto para o canvas */
+            display: block; /* Remove o espaço extra abaixo do canvas */
+        }
+
+        /* Estilo para o botão de tela cheia */
+        #fullscreenButton {
+            font-family: 'Press Start 2P', cursive; /* Usa a mesma fonte pixelada */
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #367c39; /* Borda um pouco mais escura */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px; /* Espaço entre o botão e o canvas */
+            box-shadow: 3px 3px 0px #2a5a2e; /* Efeito 3D */
+            transition: background-color 0.1s, box-shadow 0.1s;
+        }
+
+        #fullscreenButton:hover {
+            background-color: #367c39;
+            box-shadow: 1px 1px 0px #2a5a2e;
+        }
+
+        #fullscreenButton:active {
+            background-color: #2a5a2e;
+            box-shadow: none;
+            transform: translateY(2px); /* Efeito de clique */
+        }
+    </style>
+    
+</head>
+<body>
+    <button id="fullscreenButton">Tela Cheia</button>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
